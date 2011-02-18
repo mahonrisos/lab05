@@ -1,9 +1,9 @@
 class CreateProducts < ActiveRecord::Migration
   def self.up
     create_table :products do |t|
-      t.text :title
-      t.text :description
-      t.text :image_url
+      t.text :title, :null => false
+      t.text :description, :null => false
+      t.text :image_url, :null => false
       t.decimal :price, :precision => 8, :scale => 2
       t.integer :projection
       t.integer :amount
