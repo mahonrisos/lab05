@@ -10,7 +10,16 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20110218002726) do
+ActiveRecord::Schema.define(:version => 20110218010203) do
+
+  create_table "inventories", :force => true do |t|
+    t.integer  "product_id"
+    t.integer  "preview_balance"
+    t.integer  "new_balance"
+    t.integer  "future_balance"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
 
   create_table "products", :force => true do |t|
     t.text     "title",                                     :null => false
